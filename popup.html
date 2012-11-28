@@ -1,0 +1,28 @@
+<html>
+<head>
+  <style>
+    body {
+      min-width:120px;
+      text-align: center;
+      font: normal 14px sans-serif;
+    }
+  </style>
+  <script>
+    var callback = function(){
+      document.body.innerHTML = "Cache cleared!";
+      setTimeout("window.close()", 1500);
+    };
+    var oneWeekAgo = (new Date()).getTime() - (1000 * 60 * 60 * 24 * 7); // 1 week
+    chrome.browsingData.remove({
+      "since": oneWeekAgo
+    },{
+      "cache": true,
+      "localStorage": true
+    }, callback);
+  </script>
+</head>
+<body>
+  Working...
+</body>
+</html>
+

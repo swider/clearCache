@@ -1,18 +1,20 @@
 {
-  "name": "Clear Cache",
-  "version": "1.0",
-  "description": "One click cache clear",
-  "icons": {
-    "16": "icon-16.png",
-    "48": "icon-48.png",
-    "128": "icon-128.png"
-  },
-  "browser_action": {
-    "default_icon": "icon-16.png",
-    "popup": "popup.html"
-  },
-  "permissions": [
-    "browsingData"
-  ]
+	"name": "Clear Cache",
+	"version": "1.1",
+	"description": "One click cache clear",
+	"manifest_version": 2,
+	"permissions": [
+		"browsingData"
+	],
+	"browser_action": {
+		"default_icon": "icon-32.png",
+		"default_title": "Clear Cache",
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources": ["scripts.js"],
+	"icons": {
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	}
 }
-
